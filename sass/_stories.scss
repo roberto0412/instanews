@@ -1,0 +1,44 @@
+ul {
+  justify-content: $aligncenter;
+  display: $display;
+  flex-direction: $direction;
+  width: $width;
+
+  li {
+    align-self: $aligncenter;
+    width: $width;
+    min-width: 300px;
+  }
+  a {
+    display: flex;
+    text-decoration: none;
+
+    &:visited {
+      color: initial;
+    }
+    img {
+      height: $fsize;
+      width: $fsize;
+    }
+    .images {
+      display: $display;
+      width: $width;
+      max-width: $mwidth;
+      height: $fheight;
+      background-size: cover;
+
+      .abstract {
+        width: $width;
+        justify-content: center;
+        align-self: flex-end;
+        background-color: $transparent;
+        width: $width;
+
+        .ptop {
+          color: #ffffff;
+          font-family: "Open Sans";
+        }
+      }
+    }
+  }
+}

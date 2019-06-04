@@ -1,0 +1,28 @@
+body {
+  background-color: $bcolor;
+}
+
+header {
+  height: $height;
+  width: $width;
+  max-width: width 1600px;
+  display: $display;
+  margin: 0 auto;
+  text-align: $aligncenter;
+  flex-direction: $direction;
+  justify-content: $aligncenter;
+  margin-bottom: 15px;
+
+  select {
+    background: $background;
+  }
+
+  .choose {
+    color: $background;
+  }
+  .logo {
+    margin: auto;
+    width: 50%;
+    margin-bottom: 20px;
+  }
+}
