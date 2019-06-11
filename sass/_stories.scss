@@ -7,9 +7,11 @@ ul {
   li {
     align-self: $aligncenter;
     width: $width;
-    min-width: 300px;
+    // min-width: 300px;
+    text-align: $center;
   }
   a {
+    align-self: $aligncenter;
     display: flex;
     text-decoration: none;
 
@@ -23,7 +25,7 @@ ul {
     .images {
       display: $display;
       width: $width;
-      max-width: $mwidth;
+      max-width: $width;
       height: $fheight;
       background-size: cover;
 
@@ -41,4 +43,15 @@ ul {
       }
     }
   }
+}
+
+.loader {
+  position: fixed;
+  left: calc(50% - 50px);
+  bottom: 50%;
+  height: 100px;
+  width: 100px;
+  z-index: 9999;
+  background: url("../../media/ajax-loader.gif");
+  background-size: cover;
 }

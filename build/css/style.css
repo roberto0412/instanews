@@ -146,7 +146,10 @@ header {
   header .logo {
     margin: auto;
     width: 50%;
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
 
 ul {
   justify-content: center;
@@ -156,8 +159,9 @@ ul {
   ul li {
     align-self: center;
     width: 100%;
-    min-width: 300px; }
+    text-align: center; }
   ul a {
+    align-self: center;
     display: flex;
     text-decoration: none; }
     ul a:visited {
@@ -168,8 +172,8 @@ ul {
     ul a .images {
       display: flex;
       width: 100%;
-      max-width: 469px;
-      height: 300px;
+      max-width: 100%;
+      height: 250px;
       background-size: cover; }
       ul a .images .abstract {
         width: 100%;
@@ -180,3 +184,26 @@ ul {
         ul a .images .abstract .ptop {
           color: #ffffff;
           font-family: "Open Sans"; }
+
+.loader {
+  position: fixed;
+  left: calc(50% - 50px);
+  bottom: 50%;
+  height: 100px;
+  width: 100px;
+  z-index: 9999;
+  background: url("../../media/ajax-loader.gif");
+  background-size: cover; }
+
+@media only screen and (min-width: 500px) {
+  ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr 1fr;
+    text-align: center; } }
+
+@media only screen and (min-width: 1000px) {
+  ul {
+    max-width: 100%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr; } }
