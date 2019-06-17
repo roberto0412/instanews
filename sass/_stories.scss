@@ -1,13 +1,25 @@
-ul {
+.lines {
   justify-content: $aligncenter;
   display: $display;
   flex-direction: $direction;
   width: $width;
 
+  @include tablet {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr 1fr;
+    text-align: center;
+  }
+
+  @include desktop {
+    max-width: 100%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr ;
+  }
   li {
     align-self: $aligncenter;
     width: $width;
-    // min-width: 300px;
+   
     text-align: $center;
   }
   a {
@@ -28,13 +40,25 @@ ul {
       max-width: $width;
       height: $fheight;
       background-size: cover;
+      &:hover {
+        .abstract {
+          transition: opacity 1s ease-in-out;
+          opacity: 100;
+        }
+      }
 
       .abstract {
+        padding: 10px;
         width: $width;
         justify-content: center;
         align-self: flex-end;
         background-color: $transparent;
         width: $width;
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+        // &:hover {
+        //   opacity: 100;
+        // }
 
         .ptop {
           color: #ffffff;

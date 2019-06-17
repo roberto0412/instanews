@@ -1,17 +1,55 @@
 body {
   background-color: $bcolor;
+  height: 100%;
 }
-
+html {
+  height: 100%;
+}
 header {
   height: $height;
   width: $width;
   max-width: width 1600px;
   display: $display;
-  margin: 0 auto;
   text-align: $aligncenter;
+  align-items: $aligncenter;
   flex-direction: $direction;
   justify-content: $aligncenter;
   margin-bottom: 15px;
+  transition: all 1s ease-in-out;
+
+  @include tablet {
+    flex-direction: row;
+  }
+
+  @include desktop {
+    justify-content: initial;
+  }
+
+  &.header2 {
+    height: 500px;
+    transition: all 1s ease-in-out;
+
+    @include tablet {
+      margin-bottom: 0;
+      height: 200px;
+    }
+
+    .logo {
+      margin-top: 100px;
+      @include tablet {
+        margin-top: 0;
+        width: 150px;
+        height: 150px;
+      }
+    }
+
+    .container-select {
+      @include tablet {
+        position: initial;
+        padding-left: 70px;
+      }
+    }
+  }
 
   select {
     background: $background;
@@ -21,11 +59,25 @@ header {
     color: $background;
   }
   .logo {
-    margin: auto;
-    width: 50%;
-    margin-bottom: 20px;
     display: flex;
-    align-items: center;
     justify-content: center;
+
+    background: url("../../media/nyt-logo.svg");
+    height: 400px;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    width: 300px;
+  }
+  .container-select {
+    @include tablet {
+      position: relative;
+      bottom: 66px;
+    }
+
+    @include desktop {
+      position: relative;
+      left: 50px;
+    }
   }
 }

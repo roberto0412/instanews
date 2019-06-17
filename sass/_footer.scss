@@ -1,0 +1,15 @@
+footer {
+  background-color: black;
+  text-align: center;
+  height: 100px;
+  padding: 50px;
+
+
+  @include desktop {
+    text-align: initial;
+  }
+}
+
+span {
+  color: white;
+}
